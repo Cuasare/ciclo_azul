@@ -1,0 +1,103 @@
+/* Componentes. Sem sombras, gradientes, transições ou animações. */
+section > h2, .section-head { margin-bottom: 8px; }
+.section-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.section-head h2 { margin: 0; }
+
+.card { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; background: var(--bg); }
+.notice { border: 1px solid var(--red); border-left-width: 4px; border-radius: var(--radius); padding: 10px 12px; background: var(--red-soft); display: flex; gap: 10px; align-items: flex-start; }
+.notice.warn { background: var(--bg); }
+.notice.info { border-color: var(--blue); background: var(--blue-soft); }
+.notice svg { margin-top: 2px; }
+
+/* Botões */
+.btn { min-height: 44px; padding: 0 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--blue); border-radius: var(--radius); background: var(--blue); color: #fff; font-weight: 600; text-align: center; text-decoration: none; }
+.btn.sec { background: var(--bg); color: var(--blue); }
+.btn.danger { background: var(--red); border-color: var(--red); }
+.btn.small { min-height: 36px; padding: 0 12px; font-size: .875rem; }
+.btn.block { width: 100%; }
+.btn[disabled] { opacity: .5; }
+
+/* Etiquetas: sempre com ícone + texto */
+.tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 6px; border: 1px solid var(--line); border-radius: 2px; background: var(--bg); color: var(--ink); font-size: .75rem; font-weight: 600; white-space: nowrap; }
+.tag.ok { color: var(--muted); }
+.tag.info { color: var(--blue); border-color: var(--blue); background: var(--blue-soft); }
+.tag.warn { color: var(--red); border-color: var(--red); }
+.tag.crit { color: #fff; border-color: var(--red); background: var(--red); }
+
+/* Listas em linhas separadas por traço */
+.list { border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+.list > * + * { border-top: 1px solid var(--line); }
+.item { display: flex; align-items: flex-start; gap: 12px; width: 100%; padding: 12px; color: inherit; text-decoration: none; }
+button.item:hover, a.item:hover { background: var(--soft); }
+.item .t { font-weight: 600; }
+.item .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.item > svg:first-child { color: var(--blue); margin-top: 2px; }
+
+.tabs { display: flex; border-bottom: 1px solid var(--line); }
+.tabs button { flex: 1; padding: 10px 8px; text-align: center; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -1px; }
+.tabs button[aria-selected="true"] { color: var(--blue); border-bottom-color: var(--blue); }
+
+/* Formulários */
+.field { display: grid; gap: 4px; }
+.field label, .field .lbl { font-size: .875rem; font-weight: 600; }
+.input { width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+textarea.input { min-height: 80px; }
+.hint { font-size: .8125rem; color: var(--muted); }
+.error { display: flex; gap: 6px; align-items: center; color: var(--red); font-size: .875rem; font-weight: 600; }
+.error:empty { display: none; }
+.check { display: flex; align-items: center; gap: 10px; min-height: 44px; }
+.check input { width: 20px; height: 20px; accent-color: var(--blue); }
+
+/* Barra de progresso */
+.bar { height: 8px; border: 1px solid var(--line); background: var(--soft); }
+.bar i { display: block; height: 100%; background: var(--blue); }
+.bar.warn i, .bar.crit i { background: var(--red); }
+
+/* Indicadores */
+.kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.kpi { border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; display: grid; gap: 4px; align-content: start; }
+.kpi.wide { grid-column: 1 / -1; }
+.kpi .val { font-size: 1.625rem; font-weight: 700; line-height: 1.15; }
+.kpi .val small { font-size: .875rem; font-weight: 600; color: var(--muted); }
+.big { font-size: 2rem; font-weight: 700; line-height: 1.1; }
+.big small { font-size: 1rem; color: var(--muted); font-weight: 600; }
+
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: .9375rem; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; text-align: right; font-weight: 600; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+tr:last-child td { border-bottom: 0; }
+th { background: var(--soft); font-size: .75rem; text-transform: uppercase; color: var(--muted); }
+td.c, th.c { text-align: center; }
+
+.empty { padding: 24px 12px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius); }
+.code { font: 500 .75rem/1.5 ui-monospace, Menlo, Consolas, monospace; background: var(--soft); border: 1px solid var(--line); padding: 10px; overflow-x: auto; white-space: pre; border-radius: var(--radius); }
+
+/* Gráficos SVG */
+.chart { width: 100%; height: auto; display: block; }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .ax { fill: var(--muted); font-size: 11px; }
+.chart .bar-ok { fill: var(--blue); }
+.chart .bar-over { fill: var(--red); }
+.chart .bar-part { fill: var(--bg); stroke: var(--blue); stroke-width: 2; }
+.chart .line { fill: none; stroke: var(--blue); stroke-width: 2; }
+.chart .limit { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.chart .lim-t { fill: var(--ink); font-size: 11px; font-weight: 600; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: .75rem; color: var(--muted); margin-top: 6px; }
+.legend i { display: inline-block; width: 10px; height: 10px; margin-right: 4px; vertical-align: -1px; background: var(--blue); }
+.legend i.red { background: var(--red); }
+.legend i.line { height: 0; border-top: 2px dashed var(--ink); background: none; width: 14px; vertical-align: 3px; }
+
+/* Impressão / PDF dos relatórios */
+#print-area { display: none; }
+@media print {
+  body { background: #fff; }
+  #app { display: none; }
+  #print-area { display: block; color: #000; font: 12px/1.5 var(--font); padding: 12mm; }
+  #print-area h1 { font-size: 20px; margin-bottom: 4px; } #print-area h2 { font-size: 14px; margin: 16px 0 6px; }
+  #print-area table { width: 100%; border-collapse: collapse; font-size: 10px; }
+  #print-area th, #print-area td { border: 1px solid #888; padding: 3px 5px; }
+}

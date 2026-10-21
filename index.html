@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ciclo Azul</title>
+  <meta name="description" content="Monitoramento de água e rastreamento de resíduos em data centers.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Ciclo Azul">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="src/css/base.css">
+  <link rel="stylesheet" href="src/css/layout.css">
+  <link rel="stylesheet" href="src/css/components.css">
+</head>
+<body>
+  <div id="app" class="auth">
+    <header class="topbar">
+      <h1 id="title">Ciclo Azul</h1>
+      <a class="icon-btn" id="bell" href="#/alertas" aria-label="Alertas">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 16v-5a6 6 0 1 1 12 0v5l1.5 2h-15L6 16Z"/><path d="M10 21h4"/></svg>
+        <span class="count hide" id="bell-count" aria-label="alertas em aberto"></span>
+      </a>
+      <button class="icon-btn" id="user-btn" aria-label="Minha conta"></button>
+    </header>
+    <div id="flash" class="flash hide" role="status"></div>
+    <main id="view"></main>
+    <nav class="nav" id="nav" aria-label="Navegação principal"></nav>
+  </div>
+  <div id="print-area" aria-hidden="true"></div>
+  <noscript>O Ciclo Azul precisa de JavaScript para funcionar.</noscript>
+  <script type="module" src="src/js/main.js"></script>
+</body>
+</html>
